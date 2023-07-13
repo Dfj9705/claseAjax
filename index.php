@@ -10,7 +10,8 @@
     <h2>CONSULTA A POKEMON API</h2>
     <form>
         <input type="text" name="pokemon" id="pokemon">
-        <button type="submit">Consultar</button>
+        <button type="submit">Consultar</button> 
+        <button id="buttonConsulta" type="button">Consultar a PHP</button>
     </form>
     <br>
     <p id="estado"></p>

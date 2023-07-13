@@ -1,5 +1,6 @@
 const formulario = document.querySelector('form')
 const tabla = document.querySelector('table')
+const button = document.getElementById('buttonConsulta')
 
 // async function consulta(){
 
@@ -48,4 +49,26 @@ const consultarPokemon = async (e) => {
 }
 
 
+const consultaAPI = async () => {
+    const url = `./consulta.php`
+    const config = {
+        method : 'GET'
+    }
+
+    try {
+        // CONSULTA A LA API
+        const respuesta = await fetch(url, config);   
+        
+        const data = await respuesta.text()
+
+        console.log(data)
+         
+       
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+
 formulario.addEventListener('submit', consultarPokemon )
+button.addEventListener('click', consultaAPI )
